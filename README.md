@@ -6,6 +6,7 @@ This project replicates the backend infrastructure of a platform similar to Airb
 👥 Team Roles
 
 A balanced and collaborative team is key to delivering production-quality software. Below are the primary roles involved in this project, along with a brief explanation of their responsibilities. These descriptions draw from industry norms and ITRexGroup’s expert guidance.
+
 🔹 Product Owner (PO)
 
     Focus: Drives the overall product vision.
