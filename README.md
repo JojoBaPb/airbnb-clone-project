@@ -173,3 +173,131 @@ This project leverages a modern backend technology stack to ensure robustness, s
     Purpose: Continuous Integration and Continuous Deployment systems to automate testing and deployment.
 
     Use in Project: Automates code testing and deployment to improve delivery speed and maintain code quality with every change.
+
+Database Design
+
+The database is structured to efficiently handle all core functionalities of the Airbnb Clone, including user interactions, property listings, bookings, payments, and reviews. Below are the key entities, their essential fields, and their relationships.
+
+Users
+
+Represents both guests and hosts.
+
+Key Fields:
+
+    id – Primary key
+
+    username – Unique identifier for login
+
+    email – Contact email
+
+    is_host – Boolean indicating if user can list properties
+
+    date_joined – Timestamp for when the user registered
+
+Relationships:
+
+    A user can create multiple property listings (if is_host).
+
+    A user can make multiple bookings.
+
+    A user can leave multiple reviews.
+
+ Properties
+
+Represents listings that can be booked.
+
+Key Fields:
+
+    id – Primary key
+
+    title – Property name
+
+    description – Text description of the property
+
+    location – City or GPS coordinates
+
+    price_per_night – Cost of one night’s stay
+
+Relationships:
+
+    Each property is owned by one user (host).
+
+    A property can have many bookings.
+
+    A property can have many reviews.
+
+ Bookings
+
+Represents reservations made by users.
+
+Key Fields:
+
+    id – Primary key
+
+    user_id – References the user who booked
+
+    property_id – References the booked property
+
+    check_in_date – Start date of booking
+
+    check_out_date – End date of booking
+
+Relationships:
+
+    A booking belongs to one user.
+
+    A booking is for one property.
+
+    A booking may be linked to one payment.
+
+ Payments
+
+Tracks payments made for bookings.
+
+Key Fields:
+
+    id – Primary key
+
+    booking_id – References the booking paid for
+
+    amount – Total payment amount
+
+    status – e.g., pending, completed, failed
+
+    payment_date – Timestamp of the transaction
+
+Relationships:
+
+    Each payment is associated with one booking.
+
+ Reviews
+
+Allows users to review properties.
+
+Key Fields:
+
+    id – Primary key
+
+    user_id – References the reviewer
+
+    property_id – References the reviewed property
+
+    rating – Numeric score (e.g., 1–5)
+
+    comment – Text review
+
+Relationships:
+
+    A review is written by one user.
+
+    A review is linked to one property.
+
+🔗 Entity Relationships Summary
+
+    One User can have many Properties and Bookings.
+
+    One Property can have many Bookings and Reviews.
+
+    One Booking is linked to one User, one Property, and optionally one Payment.
+
+    One Review is linked to one User and one Property.
