@@ -121,3 +121,55 @@ Product Owner (PO)
         Ensures data integrity, backups, and recovery procedures.
 
         Monitors performance and handles data migration or scaling.
+
+Technology Stack
+
+This project leverages a modern backend technology stack to ensure robustness, scalability, and maintainability. Each component plays a distinct role in the development and operation of the Airbnb Clone backend.
+
+ Django
+
+    Purpose: A high-level Python web framework used to build the core application logic and structure.
+
+    Use in Project: Provides the foundation for building the backend, including user management, property listings, booking workflows, and payment systems.
+
+ Django REST Framework (DRF)
+
+    Purpose: A powerful toolkit for building Web APIs in Django.
+
+    Use in Project: Used to create the RESTful endpoints for user interactions, listings, bookings, and reviews, adhering to the OpenAPI standard.
+
+ PostgreSQL
+
+    Purpose: An advanced open-source relational database system.
+
+    Use in Project: Stores structured data like user accounts, property listings, booking records, payment logs, and review data.
+
+ GraphQL
+
+    Purpose: A query language for APIs that allows clients to request exactly the data they need.
+
+    Use in Project: Provides a flexible and efficient way to query and manipulate data beyond the REST endpoints, especially useful for client-facing applications.
+
+ Celery
+
+    Purpose: An asynchronous task queue/job queue based on distributed message passing.
+
+    Use in Project: Handles background tasks such as sending booking confirmation emails, reminders, or processing long-running jobs like payment handling.
+
+ Redis
+
+    Purpose: An in-memory data structure store used as a database, cache, and message broker.
+
+    Use in Project: Acts as the message broker for Celery and supports caching frequently accessed data for faster performance.
+
+ Docker
+
+    Purpose: A containerization platform for packaging applications and their dependencies.
+
+    Use in Project: Ensures consistent development and deployment environments by containerizing the backend services.
+
+ CI/CD Pipelines
+
+    Purpose: Continuous Integration and Continuous Deployment systems to automate testing and deployment.
+
+    Use in Project: Automates code testing and deployment to improve delivery speed and maintain code quality with every change.
