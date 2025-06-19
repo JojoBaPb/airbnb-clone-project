@@ -327,3 +327,37 @@ The system is documented using the OpenAPI standard and supports both REST and G
  Database Optimization
 
 Includes performance enhancements such as indexing and caching for frequently accessed data. These optimizations are designed to help reduce server load and improve response times for end users.
+
+API Security
+
+Securing the backend API is essential to protect sensitive user data, maintain trust, prevent abuse, and ensure platform reliability. This project incorporates several key security measures to safeguard the system and its users.
+
+Authentication
+
+What it is: Verifies the identity of users through secure login mechanisms (e.g., token-based authentication using JWT or session-based auth).
+Why it matters: Ensures only registered users can access protected routes, such as booking a property or managing a listing. Prevents unauthorized access to user accounts.
+
+Authorization
+
+What it is: Controls access to specific resources based on user roles (e.g., guest vs. host).
+Why it matters: Enforces role-based permissions—for example, only hosts can create or update properties, and only users who made a booking can leave a review.
+
+Rate Limiting
+
+What it is: Limits the number of API requests a user or IP address can make in a given time frame.
+Why it matters: Protects against brute-force attacks, abuse of resources, and ensures fair usage across the platform.
+
+Data Encryption
+
+What it is: Uses HTTPS to encrypt data in transit and may include hashing sensitive fields (e.g., passwords with bcrypt).
+Why it matters: Prevents data interception and protects user credentials and personal information.
+
+Input Validation & Sanitization
+
+What it is: Ensures that data sent to the API is clean, formatted correctly, and free of malicious code.
+Why it matters: Prevents common web vulnerabilities such as SQL Injection, Cross-Site Scripting (XSS), and data corruption.
+
+Secure Payment Handling
+
+What it is: Handles payment processing through secure channels, possibly integrating with trusted third-party gateways.
+Why it matters: Protects financial transactions and sensitive billing information, reducing the risk of fraud or data breaches.
