@@ -361,3 +361,32 @@ Secure Payment Handling
 
 What it is: Handles payment processing through secure channels, possibly integrating with trusted third-party gateways.
 Why it matters: Protects financial transactions and sensitive billing information, reducing the risk of fraud or data breaches.
+
+CI/CD Pipeline
+
+What is CI/CD?
+
+CI/CD stands for Continuous Integration and Continuous Deployment/Delivery. It's a development practice that automates the building, testing, and deployment of code changes. CI ensures that every change to the codebase is automatically tested and integrated, while CD automates deployment to production or staging environments.
+Why It Matters
+
+CI/CD pipelines are essential for:
+
+    Faster Development Cycles: Code is automatically tested and deployed, reducing manual intervention.
+
+    Higher Code Quality: Automated tests and linting reduce bugs and ensure coding standards are maintained.
+
+    Improved Reliability: Frequent, smaller deployments lower the risk of introducing critical bugs.
+
+    Team Collaboration: Developers can confidently push changes knowing issues will be caught early.
+
+Tools Used
+
+    GitHub Actions: Automates testing, linting, and deployment processes on every push or pull request.
+
+    Docker: Provides consistent environments across development, testing, and production stages.
+
+    Celery & Redis: Used in production pipelines for running asynchronous background tasks during deployment (e.g., sending emails, payment confirmation).
+
+    PostgreSQL: Database migrations and integrity checks can be triggered in the pipeline.
+
+    Example: A GitHub Actions workflow can be configured to run tests, build Docker images, and deploy to a containerized server automatically upon a merge to the main branch.
