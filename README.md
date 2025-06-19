@@ -4,7 +4,9 @@ The Airbnb Clone Project is a comprehensive, real-world application designed to 
 
 A successful software development project requires a well-balanced team where each member plays a critical role. The following roles contribute to the development and success of the Airbnb Clone backend, combining practical team assignments with industry-standard definitions based on ITRexGroup's recommendations:
 
- Product Owner (PO)
+Team Roles
+
+Product Owner (PO)
 
     Responsibility: Defines the product vision and ensures the final product aligns with user and business needs.
 
